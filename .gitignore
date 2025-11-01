@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Environnement virtuel
+venv/
+
+# Données
+data/raw/
+data/processed/
+
+# Modèles et artefacts
+models/
+mlruns/
+dvc.lock
+*.pkl
+*.joblib
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
