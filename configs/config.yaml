@@ -1,0 +1,45 @@
+data:
+  raw_path: data/Telco-Customer-Churn.csv
+  processed_path: data/clean_data.csv
+
+preprocessing:
+  target_column: Churn
+
+
+model:
+  baseline_path: models/baseline_model.pkl
+  xgb_path: models/xgb_model.pkl
+
+train:
+  mode: debug            # valeurs possibles : "debug" ou "production"
+  test_size: 0.2
+  random_state: 42
+
+baseline_model:
+  type: logistic_regression
+  C: 1.0
+  max_iter: 2000
+
+xgb_model:
+  type: xgboost
+  max_depth: 3
+  learning_rate: 0.1
+  n_estimators: 100
+  scale_pos_weight: 2.5  # Ratio classe minoritaire / majoritaire
+  reg_lambda: 2.0
+  reg_alpha: 1.0
+  gamma: 0.2
+  subsample: 0.5
+  colsample_bytree: 0.5
+
+logging:
+  log_file_preprocessing: logs/preprocessing.log
+  log_file_training: logs/training.log
+  log_file_evaluation: logs/evaluation.log
+  log_file_predict: logs/predict.log
+
+predict:
+  input_path: data/Telco-Customer-Churn.csv
+  output_path: outputs/predictions.csv
+  model_to_use: xgb  # ou "baseline"
+

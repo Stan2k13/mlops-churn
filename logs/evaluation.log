@@ -1,0 +1,23 @@
+2025-11-02 13:05:10,913 - INFO - Évaluation du modèle Baseline :
+              precision    recall  f1-score   support
+
+           0     0.8560    0.9006    0.8777      1036
+           1     0.6771    0.5791    0.6243       373
+
+    accuracy                         0.8155      1409
+   macro avg     0.7665    0.7398    0.7510      1409
+weighted avg     0.8086    0.8155    0.8106      1409
+
+2025-11-02 13:05:10,913 - INFO - Baseline balanced accuracy: 0.7398
+2025-11-02 13:05:10,932 - INFO - Évaluation du modèle XGBoost :
+              precision    recall  f1-score   support
+
+           0     0.9145    0.7539    0.8265      1036
+           1     0.5405    0.8043    0.6466       373
+
+    accuracy                         0.7672      1409
+   macro avg     0.7275    0.7791    0.7365      1409
+weighted avg     0.8155    0.7672    0.7788      1409
+
+2025-11-02 13:05:10,932 - INFO - XGBoost balanced accuracy: 0.7791
+2025-11-02 13:05:10,932 - INFO - Évaluation des modèles terminée.
