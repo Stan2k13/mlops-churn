@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 from xgboost import XGBClassifier
 from sklearn.metrics import balanced_accuracy_score
 import os
+import mlflow
 
 def setup_logger(log_path):
     logging.basicConfig(filename=log_path, level=logging.INFO,
@@ -107,6 +108,9 @@ def main(config_path):
     logging.info("Training process completed.")
 
 if __name__ == "__main__":
+    with mlflow.start_run(run_name="test_train_model"):
+        mlflow.log_param("test_param", "value")
+        mlflow.log_metric("test_metric", 1.0)
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', default='configs/config.yaml', help="Chemin du fichier de configuration")
     args = parser.parse_args()
