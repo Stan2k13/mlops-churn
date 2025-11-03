@@ -5,7 +5,8 @@ echo "Étape 1 : Prétraitement"
 python src/data_preprocessing.py --config configs/config.yaml
 
 echo "Étape 2 : Entraînement des modèles"
-python src/train_model.py --config configs/config.yaml
+python src/train_model_baseline.py --config configs/config.yaml
+python src/train_model_xgboost.py --config configs/config.yaml
 
 echo "Étape 3 : Évaluation"
 python src/evaluate_model.py --config configs/config.yaml

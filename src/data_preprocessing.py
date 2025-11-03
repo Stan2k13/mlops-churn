@@ -1,8 +1,10 @@
+import os
 import pandas as pd
 import argparse
 import yaml
 import logging
 import sys
+import joblib
 from sklearn.preprocessing import LabelEncoder
 
 def setup_logger(log_path):
@@ -53,9 +55,20 @@ def preprocess_data(df, target_column):
     if df[target_column].dtype == 'object':
         df[target_column] = df[target_column].map({'Yes': 1, 'No': 0})
 
-    # Encodage des colonnes catégorielles
+    # Encodage des colonnes catégorielles + sauvegarde des encodeurs
+
+    encoders = {}
     for col in categorical_cols:
-        df[col] = LabelEncoder().fit_transform(df[col].astype(str))
+        label_encoder = LabelEncoder()
+        df[col] = df[col].astype(str)
+        unique_values = df[col].unique().tolist()
+        if "Unknown" not in unique_values:
+            unique_values.append("Unknown")
+        label_encoder.fit(unique_values)
+        df[col] = label_encoder.transform(df[col])
+        encoders[col] = label_encoder
+        os.makedirs("models", exist_ok=True)
+        joblib.dump(encoders, "models/label_encoders.pkl")
 
     return df
 

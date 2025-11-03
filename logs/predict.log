@@ -1,0 +1,25 @@
+2025-11-03 16:40:24,037 - INFO - Starting prediction ...
+2025-11-03 16:40:24,041 - INFO - Données brutes chargées depuis /home/gary/projects/mlops-churn/data/raw_data_churn_test.csv. Shape: (1, 20)
+2025-11-03 16:40:24,506 - INFO - Scaler et encoders chargés depuis /home/gary/projects/mlops-churn/models/scaler.pkl et /home/gary/projects/mlops-churn/models/label_encoders.pkl.
+2025-11-03 16:40:24,514 - INFO - Prétraitement des nouvelles données effectué.
+2025-11-03 16:40:25,534 - INFO - CWD=/home/gary/projects/mlops-churn
+2025-11-03 16:40:25,534 - INFO - CSV cible (abs): /home/gary/projects/mlops-churn/outputs/predictions.csv
+2025-11-03 16:40:25,540 - INFO - Prédictions sauvegardées dans /home/gary/projects/mlops-churn/outputs/predictions.csv.
+2025-11-03 18:24:03,637 - INFO - Starting prediction ...
+2025-11-03 18:24:03,642 - INFO - Données brutes chargées depuis /home/gary/projects/mlops-churn/data/raw_data_churn_test.csv. Shape: (1, 20)
+2025-11-03 18:24:04,147 - INFO - Scaler et encoders chargés depuis /home/gary/projects/mlops-churn/models/scaler.pkl et /home/gary/projects/mlops-churn/models/label_encoders.pkl.
+2025-11-03 18:24:04,157 - INFO - Prétraitement des nouvelles données effectué.
+2025-11-03 18:24:05,176 - INFO - CWD=/home/gary/projects/mlops-churn
+2025-11-03 18:24:05,176 - INFO - CSV cible (abs): /home/gary/projects/mlops-churn/outputs/predictions.csv
+2025-11-03 18:24:05,181 - INFO - Prédictions sauvegardées dans /home/gary/projects/mlops-churn/outputs/predictions.csv.
+2025-11-03 18:26:50,587 - INFO - Starting prediction ...
+2025-11-03 18:26:50,589 - INFO - Données brutes chargées depuis /home/gary/projects/mlops-churn/data/raw_data_churn_test.csv. Shape: (1, 20)
+2025-11-03 18:26:51,467 - INFO - Modèle chargé depuis models:/CustomerChurnModelXgboost/4.
+2025-11-03 18:33:39,587 - INFO - Starting prediction ...
+2025-11-03 18:33:39,592 - INFO - Données brutes chargées depuis /home/gary/projects/mlops-churn/data/raw_data_churn_test.csv. Shape: (1, 20)
+2025-11-03 18:33:41,096 - INFO - Modèle chargé depuis models:/CustomerChurnModelXgboost/4.
+2025-11-03 18:35:11,942 - INFO - Starting prediction ...
+2025-11-03 18:35:11,946 - INFO - Données brutes chargées depuis /home/gary/projects/mlops-churn/data/raw_data_churn_test.csv. Shape: (1, 20)
+2025-11-03 18:35:13,444 - INFO - Modèle chargé depuis models:/CustomerChurnModelXgboost/4.
+2025-11-03 18:35:13,526 - INFO - Prétraitement des nouvelles données effectué.
+2025-11-03 18:35:13,533 - INFO - Prédictions sauvegardées dans /home/gary/projects/mlops-churn/outputs/predictions.csv.
